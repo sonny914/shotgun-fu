@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Fast headless validation before each commit. Enable: git config core.hooksPath .githooks
+tools/validate.sh
+rc=$?
+if [[ $rc -eq 2 ]]; then
+  echo "pre-commit: Godot not installed — validation SKIPPED. CI will gate this push." >&2
+  exit 0
+fi
+exit $rc
