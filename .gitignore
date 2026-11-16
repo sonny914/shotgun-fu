@@ -1,0 +1,13 @@
+# Godot
+.godot/
+*.translation
+export_presets.cfg
+/build/
+
+# Local toolchain (tools/install_godot.sh)
+/.toolchain/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.tmp

@@ -1,0 +1,54 @@
+; Engine configuration file.
+; Hand-edits are fine; keep sections sorted the way the editor writes them.
+
+config_version=5
+
+[application]
+
+config/name="SHOTGUN-FU"
+config/description="Action RPG. The shotgun is the main character."
+run/main_scene="res://scenes/boot.tscn"
+config/features=PackedStringArray("4.5", "Forward Plus")
+
+[debug]
+
+gdscript/warnings/exclude_addons=true
+gdscript/warnings/untyped_declaration=2
+gdscript/warnings/unsafe_property_access=1
+gdscript/warnings/unsafe_method_access=1
+gdscript/warnings/unsafe_cast=1
+gdscript/warnings/unsafe_call_argument=1
+gdscript/warnings/return_value_discarded=0
+
+[display]
+
+window/size/viewport_width=480
+window/size/viewport_height=270
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="viewport"
+window/stretch/scale_mode="integer"
+
+[layer_names]
+
+2d_physics/layer_1="world"
+2d_physics/layer_2="player"
+2d_physics/layer_3="enemy"
+2d_physics/layer_4="player_hitbox"
+2d_physics/layer_5="enemy_hitbox"
+2d_physics/layer_6="player_hurtbox"
+2d_physics/layer_7="enemy_hurtbox"
+2d_physics/layer_8="grabbable"
+2d_physics/layer_9="projectile_block"
+
+[physics]
+
+common/physics_ticks_per_second=60
+
+[rendering]
+
+renderer/rendering_method="forward_plus"
+textures/canvas_textures/default_texture_filter=0
+2d/snap/snap_2d_transforms_to_pixel=true
+viewport/hdr_2d=true
+environment/defaults/default_clear_color=Color(0.05, 0.04, 0.1, 1)
